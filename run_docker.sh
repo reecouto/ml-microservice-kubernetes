@@ -1,12 +1,14 @@
 #!/usr/bin/env bash
+docker_id="reecouto"
+image_name="sklearn-flask-app"
+version="latest"
 
-## Complete the following steps to get Docker running locally
-
-# Step 1:
 # Build image and add a descriptive tag
+docker image build -t ${docker_id}/${image_name}:${version} .
 
-# Step 2: 
 # List docker images
+docker image ls | grep ${image_name}
 
-# Step 3: 
 # Run flask app
+docker container run --rm --name ${image_name} -p 8000:80 \
+       ${docker_id}/${image_name}:${version}
