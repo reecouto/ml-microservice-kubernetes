@@ -14,5 +14,5 @@ FROM python:3.7.3-stretch
 # Expose port 80
 
 ## Step 5:
-# Run app.py at container launch
+# Run app.py at container launc
 
