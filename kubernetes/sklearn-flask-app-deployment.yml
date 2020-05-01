@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: sklearn-flask-app-deployment
+  labels:
+    app: sklearn-flask-app
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: sklearn-flask-app
+  template:
+    metadata:
+      labels:
+        app: sklearn-flask-app
+    spec:
+      containers:
+      - name: sklearn-flask-app
+        image: reecouto/sklearn-flask-app:latest
+        ports:
+        - containerPort: 80
