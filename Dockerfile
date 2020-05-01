@@ -10,7 +10,6 @@ COPY requirements.txt /app/
 COPY model_data/ /app/model_data/
 
 # Install packages from requirements.txt
-RUN cd /app/
 #RUN pip install --upgrade &&\
 RUN  pip install -r requirements.txt
   
